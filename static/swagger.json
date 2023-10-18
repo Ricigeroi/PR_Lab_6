@@ -26,11 +26,11 @@
             }
           ],
           "responses": {
-            "200": {
-              "description": "Specific Scooter"
+            "201": {
+              "description": "Scooter creation successful!"
             },
             "400": {
-              "description": "Invalid request data"
+              "description": "Bad request"
             }
           }
         }
@@ -58,15 +58,15 @@
           ],
           "responses": {
             "200": {
-              "description": "Specific Scooter"
+              "description": "Success! Returned a scooter"
             },
             "400": {
-              "description": "Invalid request data"
+              "description": "Bad request"
             }
           }
         },
         "put": {
-          "description": "Modify a scooter",
+          "description": "Update a scooter",
           "consumes": [
             "application/json"
           ],
@@ -96,10 +96,10 @@
           ],
           "responses": {
             "200": {
-              "description": "Electro Scooter updated successfully"
+              "description": "Success! Scooter updated"
             },
             "400": {
-              "description": "Invalid request data"
+              "description": "Bad request"
             }
           }
         },
@@ -123,7 +123,7 @@
             }
             },
             {
-              "name": "X-Delete-Password (password = 123)",
+              "name": "X-Delete-Password",
               "in": "header",
               "description": "Password",
               "required": true,
@@ -134,10 +134,10 @@
           ],
           "responses": {
             "200": {
-              "description": "Electro Scooter updated successfully"
+              "description": "Success! Scooter deleted"
             },
             "400": {
-              "description": "Invalid request data"
+              "description": "Bad request"
             }
           }
         }
