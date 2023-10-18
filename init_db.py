@@ -1,7 +1,8 @@
 # init_db.py
-from database_connect import get_db_connection
+from models.database import get_db_connection
 
 
+# creates db from scratch
 def init_database():
     connection = get_db_connection()
     cursor = connection.cursor()
@@ -17,6 +18,7 @@ def init_database():
     connection.commit()
     cursor.close()
     connection.close()
+
 
 if __name__ == "__main__":
     init_database()

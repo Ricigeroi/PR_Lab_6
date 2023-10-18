@@ -1,10 +1,11 @@
 from flask import Flask
 from flask_swagger_ui import get_swaggerui_blueprint
-from database_connect import get_db_connection
+from models.database import get_db_connection
 
 def create_app():
     app = Flask(__name__)
     return app
+
 
 if __name__ == "__main__":
     app = create_app()

@@ -1,4 +1,4 @@
-from database_connect import get_db_connection
+from models.database import get_db_connection
 
 
 class ElectroScooter:
