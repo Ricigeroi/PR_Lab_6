@@ -8,10 +8,14 @@ def get_db_connection():
     password = "admin"
     db_name = "ElectroScooters"
 
-    connection = psycopg2.connect(
-        host=host,
-        user=user,
-        password=password,
-        database=db_name
-    )
-    return connection
+    try:
+        connection = psycopg2.connect(
+            host=host,
+            user=user,
+            password=password,
+            database=db_name
+        )
+        return connection
+
+    except Exception as _ex:
+        print("Failed to connect to PostgreSQL database.")

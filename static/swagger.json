@@ -151,7 +151,7 @@
             "type": "string"
           },
           "battery_level": {
-            "type": "integer"
+            "type": "number"
           }
         }
       }
